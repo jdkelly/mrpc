@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if title %}{{ title }} - MRPC{% else %}Welcome to Marple Rifle and Pistol Club{% endif %}
+{% endblock %}
+
+{% block app_content %}
+
+    <div class="content-header-big">
+        <h1>What we do at the club</h1>
+    </div>
+
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alter alter-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="content-top">
+        <ul>
+            <li>
+                This page gives a brief introduction to Marple Rifle and Pistol Club (MRPC), a private, members only, target shooting club for all types and calibres of rifle and pistol. For more details on how to join, click on the How to visit the Club, or the Club Details links opposite; or telephone the club on 0161 427 9133 Monday to Friday inclusive, between the hours of 19:30 and 20:30 and ask to speak to a Range Officer. The Club is located in Marple, Stockport, Cheshire, near to the Derbyshire border and is close to the city of Manchester in the North-West of England in the UK: see Club Details how to join and costs.
+            </li>
+            <li>
+                The club was founded in 1957 and has been in continuous operation ever since, it is thus one of the oldest members only, target shooting ranges in the Manchester area. It is affiliated to both the National Smallbore Rifle Association (NSRA) and the National Rifle Association (NRA). We also shoot Black Powder to the Muzzle Loaders Association of Great Britain (MLAGB) rules. It is open to anyone, both male and female who wish to take part in the sport of target shooting. The minimum age for full adult membership is 18 and for juniors, 14, but see below for airgun shooting.
+            </li>
+            <li>
+                We have a 25 metre indoor range with a total of 10 firing points and can accommodate all types of target gun. Of these 10 firing points, 6 can be used in the standing position for fullbore carbine, fullbore pistol and Black Powder. Eight of the 10 firing points can be used by .22 rimfire rifles and carbines shot from a standing or kneeling position and all 10 firing points can be used for prone .22 rimfire rifle shooting. Originally opened as a .22 rimfire only range, we upgraded to centrefire (fullbore) in 1990 and unlimited calibre Black Powder shooting in 2004.
+            </li>
+            <li>
+                In addition to shooting at 25 metres, we can also shoot at 10, 15, 20 metres, 20 and 25 yards. We also have an electrically operated turning target system, which can be used at any of these distances so as to allow participation in timed fire events.
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
